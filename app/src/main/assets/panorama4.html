@@ -1,0 +1,596 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        #panorama {
+            width: 100%;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+
+<div id="panorama"></div>
+<script>
+    pannellum.viewer('panorama', {
+
+    "autoLoad": true,
+
+        "default": {
+            "firstScene": "ruta 8",
+            "author": "La Salle Loja",
+            "sceneFadeDuration": 1000,
+            "showControls": true,
+            "hotSpotDebug": true,
+        },
+        "scenes": {
+            "ruta 1": {
+                "title": "Sitio",
+                "hfov": 100,
+                "pitch": 0,
+                "yaw": 0,
+                "type": "equirectangular",
+                "panorama": "ruta1.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": 0,
+                        "yaw": 0,
+                        "type": "scene",
+                        "text": "ruta 2",
+                        "sceneId": "ruta 2"
+                    }
+
+                ]
+            },
+            "ruta 2": {
+                "title": "Ruta 2",
+                "hfov": 100,
+                "pitch": 0,
+                "yaw": 0,
+                "type": "equirectangular",
+                "panorama": "ruta2.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -10,
+                        "yaw": 0,
+                        "type": "scene",
+                        "text": "ruta 3",
+                        "sceneId": "ruta 3"
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw": 180,
+                        "type": "scene",
+                        "text": "ruta 1",
+                        "sceneId": "ruta 1"
+                    }
+                ]
+            },
+
+            "ruta 3": {
+                "title": "Entrada",
+                "hfov": 100,
+                "pitch": 0,
+                "yaw": -100,
+                "type": "equirectangular",
+                "panorama": "ruta3.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -10,
+                        "yaw": -125,
+                        "type": "scene",
+                        "text": "Planta Baja",
+                        "sceneId": "ruta 4"
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw": 180,
+                        "type": "scene",
+                        "text": "ruta 2",
+                        "sceneId": "ruta 2"
+                    }
+                ]
+            },
+
+            "ruta 4": {
+                "title": "Planta Baja",
+                "hfov": 100,
+                "pitch": -15.3,
+                "yaw": -1,
+                "type": "equirectangular",
+                "panorama": "ruta4.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -150,
+                        "yaw": -60,
+                        "type": "scene",
+                        "text": "ruta 5",
+                        "sceneId": "ruta 5"
+                    },
+                    {
+
+                        "pitch": -30,
+                        "yaw": -10,
+                        "type": "scene",
+                        "text": "Escaleras 1",
+                        "sceneId": "ruta 8"
+                    },
+                    {
+                        "pitch": -30,
+                        "yaw": 180,
+                        "type": "scene",
+                        "text": "ruta 3",
+                        "sceneId": "ruta 3"
+                    }
+                ]
+            },
+
+            "ruta 5": {
+                "title": "Planta Baja Pasillo 1",
+                "hfov": 100,
+                "pitch": -22,
+                "yaw": 88,
+                "type": "equirectangular",
+                "panorama": "ruta5.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -22,
+                        "yaw": 88,
+                        "type": "scene",
+                        "text": "ruta 6",
+                        "sceneId": "ruta 6"
+                    },
+                    {
+                        "pitch": -29,
+                        "yaw": -112,
+                        "type": "scene",
+                        "text": "ruta 4",
+                        "sceneId": "ruta 4"
+                    },
+                    {
+                        "pitch": -14.5,
+                        "yaw": 153.8,
+                        "type": "info",
+                        "text": "Autor: Maria de Lourdes Título: Árbol de la vida Técnica: Mixta Dimensiones: 100cm x 120cm"
+                    }
+
+                ]
+            },
+
+            "ruta 6": {
+                "title": "Planta Baja Pasillo 2",
+                "hfov": 100,
+                "pitch": -27,
+                "yaw": -96,
+                "type": "equirectangular",
+                "panorama": "ruta6.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -20,
+                        "yaw": -108,
+                        "type": "scene",
+                        "text": "ruta 7",
+                        "sceneId": "ruta 7"
+                    },
+                    {
+                        "pitch": -26,
+                        "yaw": 93,
+                        "type": "scene",
+                        "text": "ruta 5",
+                        "sceneId": "ruta 5"
+                    }
+                ]
+            },
+
+            "ruta 7": {
+                "title": "Planta Baja Pasillo 3",
+                "hfov": 100,
+                "pitch": -27,
+                "yaw": -96,
+                "type": "equirectangular",
+                "panorama": "ruta7.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -27,
+                        "yaw": 85,
+                        "type": "scene",
+                        "text": "ruta 6",
+                        "sceneId": "ruta 6"
+                    }
+                ]
+            },
+
+            "ruta 8": {
+                "title": "Centro",
+                "hfov": 100,
+                "pitch": -5.9,
+                "yaw": 3.4,
+                "type": "equirectangular",
+                "panorama": "ruta8.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -28.8,
+                        "yaw": -49.5,
+                        "type": "scene",
+                        "text": "Planta Baja",
+                        "sceneId": "ruta 4"
+                    },
+                    {
+                        "pitch": -35.3,
+                        "yaw": 35.7,
+                        "type": "scene",
+                        "text": "Pasillo 1",
+                        "sceneId": "ruta 9"
+                    },
+                    {
+                        "pitch": -30.1,
+                        "yaw": -96.2,
+                        "type": "scene",
+                        "text": "Escaleras 2",
+                        "sceneId": "ruta 14"
+                    },
+                    {
+                        "pitch": -28.5,
+                        "yaw": -157.6,
+                        "type": "info",
+                        "text": "Autor: Ignacio Ordoñez Título: Sin título Técnica: Mixta Docente: Marlon Chamba"
+                    },
+                    {
+                        "pitch": -9.4,
+                        "yaw": -134,
+                        "type": "info",
+                        "text": "Autor: Monserrath Peñaranda Título: Amorfos Técnica: Témpera sobre cartulina Docente: Diego González"
+                    },
+                    {
+                        "pitch": -8.8,
+                        "yaw": 165.4,
+                        "type": "info",
+                        "text": "Autor: Pamela Cabrera Título: Manglares Técnica: Acrílico sobre lienzo Docente: María Magdalena"
+                    }
+                ]
+            },
+
+            "ruta 9": {
+                "title": "Pasillo 1",
+                "hfov": 100,
+                "pitch": -16,
+                "yaw": -3.4,
+                "type": "equirectangular",
+                "panorama": "ruta9.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -30.3,
+                        "yaw": -4.3,
+                        "type": "scene",
+                        "text": "Pasillo 2",
+                        "sceneId": "ruta 10"
+                    },
+                    {
+                        "pitch": -45.1,
+                        "yaw": -168.12,
+                        "type": "scene",
+                        "text": "Centro",
+                        "sceneId": "ruta 8"
+                    }
+                ]
+            },
+
+            "ruta 10": {
+                "title": "Pasillo 2",
+                "hfov": 100,
+                "pitch": -16,
+                "yaw": -3.4,
+                "type": "equirectangular",
+                "panorama": "ruta10.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -30.3,
+                        "yaw": -4.3,
+                        "type": "scene",
+                        "text": "Centro Pasillo",
+                        "sceneId": "ruta 11"
+                    },
+                    {
+                        "pitch": -45.1,
+                        "yaw": -168.12,
+                        "type": "scene",
+                        "text": "Pasillo 1",
+                        "sceneId": "ruta 9"
+                    }
+                ]
+            },
+            "ruta 11": {
+                "title": "Centro Pasillo",
+                "hfov": 100,
+                "pitch": -16,
+                "yaw": -3.4,
+                "type": "equirectangular",
+                "panorama": "ruta11.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -37.7,
+                        "yaw": -153.4,
+                        "type": "scene",
+                        "text": "Pasillo 4",
+                        "sceneId": "ruta 12"
+                    },
+                    {
+                        "pitch": -36.1,
+                        "yaw": 138.4,
+                        "type": "scene",
+                        "text": "Pasillo 2",
+                        "sceneId": "ruta 10"
+                    }
+                ]
+            },
+            "ruta 12": {
+                "title": "Pasillo 4",
+                "hfov": 100,
+                "pitch": -16,
+                "yaw": -3.4,
+                "type": "equirectangular",
+                "panorama": "ruta12.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -37.7,
+                        "yaw": -153.4,
+                        "type": "scene",
+                        "text": "Centro Pasillo",
+                        "sceneId": "ruta 11"
+
+                    },
+                    {
+                        "pitch": -31,
+                        "yaw": -0.3,
+                        "type": "scene",
+                        "text": "Pasillo 5",
+                        "sceneId": "ruta 13"
+                    }
+                ]
+            },
+
+            "ruta 13": {
+                "title": "Pasillo 5",
+                "hfov": 100,
+                "pitch": -16,
+                "yaw": -3.4,
+                "type": "equirectangular",
+                "panorama": "ruta13.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -34.2,
+                        "yaw": -6.6,
+                        "type": "scene",
+                        "text": "Centro",
+                        "sceneId": "ruta 8"
+
+                    },
+                    {
+                        "pitch": -43,
+                        "yaw": -170.3,
+                        "type": "scene",
+                        "text": "Pasillo 4",
+                        "sceneId": "ruta 12"
+                    }
+                ]
+            },
+
+            "ruta 14": {
+                "title": "Segundo Piso",
+                "hfov": 100,
+                "pitch": -16,
+                "yaw": -3.4,
+                "type": "equirectangular",
+                "panorama": "ruta14.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -34.4,
+                        "yaw": 4.1,
+                        "type": "scene",
+                        "text": "Pasillo 1",
+                        "sceneId": "ruta 15"
+
+                    },
+                    {
+                        "pitch": -72.9,
+                        "yaw": 113.5,
+                        "type": "scene",
+                        "text": "Primer Piso Centro",
+                        "sceneId": "ruta "
+                    }
+                ]
+            },
+
+            "ruta 15": {
+                "title": "Pasillo 1",
+                "hfov": 100,
+                "pitch": -3.7,
+                "yaw": -64.2,
+                "type": "equirectangular",
+                "panorama": "ruta15.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -38.8,
+                        "yaw": -73.6,
+                        "type": "scene",
+                        "text": "Escaleras",
+                        "sceneId": "ruta 16"
+
+                    },
+                    {
+                        "pitch": -49.96,
+                        "yaw": -142.16,
+                        "type": "scene",
+                        "text": "Segundo Piso",
+                        "sceneId": "ruta 14"
+                    }
+                ]
+            },
+
+            "ruta 16": {
+                "title": "Pasillo 2",
+                "hfov": 100,
+                "pitch": 3.7,
+                "yaw": -99.7,
+                "type": "equirectangular",
+                "panorama": "ruta16.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -62.4,
+                        "yaw": -176.4,
+                        "type": "scene",
+                        "text": "Escaleras",
+                        "sceneId": "ruta 15"
+
+                    },
+                    {
+                        "pitch": -24.8,
+                        "yaw": -103.6,
+                        "type": "scene",
+                        "text": "Pasillo 1",
+                        "sceneId": "ruta 17"
+                    }
+                ]
+            },
+
+            "ruta 17": {
+                "title": "Entrada al Mirador",
+                "hfov": 100,
+                "pitch": -1.2,
+                "yaw": 63.3,
+                "type": "equirectangular",
+                "panorama": "ruta17.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -19.3,
+                        "yaw": 174.6,
+                        "type": "scene",
+                        "text": "Pasillo 2",
+                        "sceneId": "ruta 16"
+
+                    },
+                    {
+                        "pitch": -35.2,
+                        "yaw": 54.2,
+                        "type": "scene",
+                        "text": "Entrada",
+                        "sceneId": "ruta 18"
+                    }
+                ]
+            },
+
+            "ruta 18": {
+                "title": "Entrada",
+                "hfov": 100,
+                "pitch": -0.9,
+                "yaw": -41.5,
+                "type": "equirectangular",
+                "panorama": "ruta18.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -30.1,
+                        "yaw": -81.2,
+                        "type": "scene",
+                        "text": "Escaleras 1",
+                        "sceneId": "ruta 19"
+
+                    },
+                    {
+                        "pitch": -25.9,
+                        "yaw": -173.9,
+                        "type": "scene",
+                        "text": "Entrada al Mirador",
+                        "sceneId": "ruta 17"
+                    }
+                ]
+            },
+
+            "ruta 19": {
+                "title": "Primer Piso Mirador",
+                "hfov": 100,
+                "pitch": -17.9,
+                "yaw": -21.4,
+                "type": "equirectangular",
+                "panorama": "ruta19.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -37.8,
+                        "yaw": -76.9,
+                        "type": "scene",
+                        "text": "Segundo Piso Mirador",
+                        "sceneId": "ruta 20"
+
+                    },
+                    {
+                        "pitch": -49.4,
+                        "yaw": 71.4,
+                        "type": "scene",
+                        "text": "Entrada",
+                        "sceneId": "ruta 18"
+                    }
+                ]
+            },
+            "ruta 20": {
+                "title": "Segundo Piso Mirador",
+                "hfov": 100,
+                "pitch": -17.9,
+                "yaw": -21.4,
+                "type": "equirectangular",
+                "panorama": "ruta20.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -43.1,
+                        "yaw": -70.1,
+                        "type": "scene",
+                        "text": "Tercer Piso Mirador",
+                        "sceneId": "ruta 21"
+
+                    },
+                    {
+                        "pitch": -39.9,
+                        "yaw": 59.7,
+                        "type": "scene",
+                        "text": "Segundo Piso Mirador",
+                        "sceneId": "ruta 19"
+                    }
+                ]
+            },
+
+            "ruta 21": {
+                "title": "Tercer Piso Mirador",
+                "hfov": 100,
+                "pitch": 4.1,
+                "yaw": 0.7,
+                "type": "equirectangular",
+                "panorama": "ruta21.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -45.1,
+                        "yaw": -103.9,
+                        "type": "scene",
+                        "text": "Segundo Piso Mirador",
+                        "sceneId": "ruta 20"
+
+                    }
+                ]
+            }
+
+        }
+    });
+</script>
+
+</body>
+</html>
